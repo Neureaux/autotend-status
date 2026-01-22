@@ -1,0 +1,78 @@
+# Upptime Configuration
+# Documentation: https://upptime.js.org/docs/configuration
+
+owner: neureaux
+repo: autotend-status
+
+# Sites to monitor
+sites:
+  - name: AutoTend App
+    url: https://app.dev.autotend.io
+    icon: https://app.dev.autotend.io/favicon.ico
+
+  - name: Marketing Site
+    url: https://dev.autotend.io
+    icon: https://dev.autotend.io/favicon.ico
+
+  - name: Admin Dashboard
+    url: https://admin.dev.autotend.io
+    icon: https://admin.dev.autotend.io/favicon.ico
+
+  - name: Control Plane API
+    url: https://cp.dev.autotend.io/health
+    expectedStatusCodes:
+      - 200
+      - 404
+
+  - name: Deployment Dashboard
+    url: https://deploy.dev.autotend.io
+    icon: https://deploy.dev.autotend.io/favicon.ico
+
+# Status page configuration
+status-website:
+  cname: status.dev.autotend.io
+  baseUrl: /
+  logoUrl: https://dev.autotend.io/logo.png
+  name: AutoTend Status
+  introTitle: "**AutoTend** is the modern attendance tracking platform for education."
+  introMessage: This page shows real-time status and incident history for all AutoTend services.
+  navbar:
+    - title: Status
+      href: /
+    - title: AutoTend
+      href: https://dev.autotend.io
+    - title: App
+      href: https://app.dev.autotend.io
+
+# Branding
+i18n:
+  activeIncidents: Active Incidents
+  allSystemsOperational: All Systems Operational
+  incidentHistory: Incident History
+
+# Notifications (can add later)
+# notifications:
+#   - type: slack
+#     channel: status-alerts
+
+# Uptime robot-style badges
+workflowSchedule:
+  graphs: "0 0 * * *"
+  responseTime: "0 23 * * *"
+  staticSite: "0 1 * * *"
+  summary: "0 0 * * *"
+  updateTemplate: "0 0 1 * *"
+  updates: "0 3 * * *"
+  uptime: "*/5 * * * *"
+
+# Commit messages
+commitMessages:
+  commitAuthorName: Upptime Bot
+  commitAuthorEmail: upptime@autotend.io
+  templateUpdate: "chore: update upptime template"
+  readmeRecreate: "chore: recreate README"
+  summaryCreate: "chore: update summary"
+  graphsUpdate: "chore: update graphs"
+  statusChange: "status: $SITE_NAME is $SITE_STATUS"
+  scheduleDown: "schedule: mark $SITE_NAME as down"
+  scheduleUp: "schedule: mark $SITE_NAME as up"
